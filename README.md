@@ -16,18 +16,18 @@ The idea is this:
 
 
 ● Find the extreme points in the hand
-
+![1](https://user-images.githubusercontent.com/40145410/50377346-54a1f400-0624-11e9-9669-133a7a101086.PNG)
 
 ● Then use their intersection to estimate the center of the hand
-
+![capture](https://user-images.githubusercontent.com/40145410/50377348-7307ef80-0624-11e9-8847-f5b047dfec78.PNG)
 
 
 ● Calculate the distance for the point further away from the center 
-
+![capture](https://user-images.githubusercontent.com/40145410/50377359-93d04500-0624-11e9-9354-8dec40f4dcac.PNG)
 
 
 ● Using that distance to create circle(Any points that are outside of the circle,those should be extended fingers) 
-
+![capture](https://user-images.githubusercontent.com/40145410/50377366-b06c7d00-0624-11e9-9ae9-a7a359aaffbe.PNG)
 
 
 
