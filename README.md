@@ -12,6 +12,8 @@ Grabbed the hands segment from the region of interest. In order to perform backg
 
 # Count the fingers being held up 
 The idea is this: 
+
+
 ● Find the extreme points in the hand
 
 
