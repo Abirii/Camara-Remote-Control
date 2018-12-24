@@ -2,7 +2,9 @@
 Count how many fingers are being held up
 
 # Demo
-![demo](https://user-images.githubusercontent.com/40145410/50377314-cded1700-0623-11e9-87f8-f9f0a7acfab3.PNG)
+
+![video1545480416](https://user-images.githubusercontent.com/40145410/50406760-26164b80-07d3-11e9-8bee-ccc3980f445a.gif)
+
 
 # pre-processing
 Background Extraction from a Video Background extraction comes important in object tracking. If you already have an image of the bare background, then it is simple. But in many cases, you won't have such an image and so, you will have to create one. That is where Running Average comes in handy. The function we use here to find Running Average is ​cv2.accumulateWeighted() we keep feeding each frame to this function, and the function keep finding the averages of all frames I found that  achieves good results for 60 frames. 0.02 =  α
