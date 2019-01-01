@@ -9,22 +9,22 @@ Count how many fingers are being held up
 ![capture](https://user-images.githubusercontent.com/40145410/50406794-dd12c700-07d3-11e9-86da-fada81684e47.PNG)
 
 
-# pre-processing
-Background Extraction from a Video Background extraction comes important in object tracking. If you already have an image of the bare background, then it is simple. But in many cases, you won't have such image and so, you will have to create one. That is where Running Average comes in handy. The function we use here to find Running Average is ​cv2.accumulateWeighted() we keep feeding each frame to this function, and the function keep finding the averages of all frames I found that  achieves good results for 60 frames. 0.02 =  α
+# Motion Region of Interest
+Background Extraction from a Video Background extraction comes important in object tracking. If you already have an image with constant background, then it is simple. But in the wild, background we be noisy, so one has to estimate the background across time. That is were we use Running Average implemented by ​cv2.accumulateWeighted(). We keep feeding each frame to this function, and the function keep finding the averages of all frames. We found that it achieves good results for 60 frames. 0.02 = α This results in an estimated background model learnt over time.
 
 
-# Segment
-Grabbed the hands segment from the region of interest. In order to perform background subtraction, we first must “learn; a model of the background. Once learned, this background model is compared against the current image and then the known background parts ae subtracted away. The object left after subtraction are presumably new foreground objects. And then we can find the external contours from the image. I had to blur the frames using ​Gaussian blur ​and morphology operations (​opening​) to  ​achieve better results
+# Hand Segmentation
+For each frame in time - The estimated background is substracted from the current image. The object left after subtraction are presumably the foreground objects. We had to blur the frames using ​Gaussian blur ​and morphology operations (​opening​) to ​achieve better results. Finally we can find the external contours from the Hand Segment.
 
 # Count the fingers being held up 
-The main idea is: 
+We follow the steps bellow: 
 
 
-● Find the extreme points in the hand
+● Find the extrema Locations in the hand segment
 
 ![1](https://user-images.githubusercontent.com/40145410/50377346-54a1f400-0624-11e9-9669-133a7a101086.PNG)
 
-● Then use their intersection to estimate the center of the hand
+●  Use Extrema to calculate the hand center
 
 ![capture](https://user-images.githubusercontent.com/40145410/50377348-7307ef80-0624-11e9-8847-f5b047dfec78.PNG)
 
@@ -34,7 +34,7 @@ The main idea is:
 ![capture](https://user-images.githubusercontent.com/40145410/50377359-93d04500-0624-11e9-9354-8dec40f4dcac.PNG)
 
 
-● Using that distance to create circle(Any points that are outside of the circle,those should be extended fingers) 
+● Using that distance to create circle (Any points that are outside of the circle,those should be extended fingers) 
 
 ![capture](https://user-images.githubusercontent.com/40145410/50377366-b06c7d00-0624-11e9-9ae9-a7a359aaffbe.PNG)
 
