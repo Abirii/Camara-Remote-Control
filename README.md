@@ -13,7 +13,7 @@ Take a video as input and breaking the video into frames and simultaneously stor
 
 # Iteration over the frames
 After getting list of frames we perform iteration over the frames and control the index of the list with the 
-number of the fingers are being held up.
+number of that fingers are being held up.
 
 # Finger-counting
 Count how many fingers are being held up
