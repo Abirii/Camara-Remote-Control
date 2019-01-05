@@ -7,14 +7,6 @@ Count how many fingers are being held up
 
 ![capture](https://user-images.githubusercontent.com/40145410/50406794-dd12c700-07d3-11e9-86da-fada81684e47.PNG)
 
-
-
-![ezgif com-video-to-gif 2](https://user-images.githubusercontent.com/40145410/50726093-df005280-1110-11e9-9775-87e452546eb2.gif)
-![ezgif com-video-to-gif 1](https://user-images.githubusercontent.com/40145410/50726090-ce4fdc80-1110-11e9-8a86-11630ed8b7a6.gif)
-
-
-
-
 # Motion Region of Interest
 Background Extraction from a Video Background extraction comes important in object tracking. If you already have an image with constant background, then it is simple. But in the wild, background we be noisy, so one has to estimate the background across time. That is were we use Running Average implemented by ​cv2.accumulateWeighted(). We keep feeding each frame to this function, and the function keep finding the averages of all frames. We found that it achieves good results for 60 frames. 0.02 = α This results in an estimated background model learnt over time.
 
