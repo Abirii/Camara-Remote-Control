@@ -8,13 +8,12 @@ The main idea is:
 
 ● Count how many fingers are being held up
 
-
 # Store the video frames
 Take a video as input and breaking the video into frames and simultaneously store that frames in a list.
 
+# Iteration over the frames
 After getting list of frames we perform iteration over the frames and control the index of the list with the 
 number of the fingers are being held up.
-
 
 # Finger-counting
 Count how many fingers are being held up
