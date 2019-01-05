@@ -2,8 +2,10 @@
 Count how many fingers are being held up
 
 # Demo
+![ezgif com-video-to-gif 1](https://user-images.githubusercontent.com/40145410/50726090-ce4fdc80-1110-11e9-8a86-11630ed8b7a6.gif)
 
-![video1545480416](https://user-images.githubusercontent.com/40145410/50406760-26164b80-07d3-11e9-8bee-ccc3980f445a.gif)
+
+![video1545480416](https://user-images.githubusercontent.com/40145410/50406760-26164b80-07d3-11e9-8bee-ccc3980f445a.gif) ![ezgif com-video-to-gif 2](https://user-images.githubusercontent.com/40145410/50726093-df005280-1110-11e9-9775-87e452546eb2.gif)
 
 
 ![capture](https://user-images.githubusercontent.com/40145410/50406794-dd12c700-07d3-11e9-86da-fada81684e47.PNG)
