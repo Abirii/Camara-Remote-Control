@@ -8,10 +8,6 @@ Count how many fingers are being held up
 ![capture](https://user-images.githubusercontent.com/40145410/50406794-dd12c700-07d3-11e9-86da-fada81684e47.PNG)
 
 
-![controlledvideoonlinevideocu 1](https://user-images.githubusercontent.com/40145410/50729079-51d2f300-113c-11e9-8c3f-6f33404b1f8a.gif)
-![fingercountonlinevideocutter](https://user-images.githubusercontent.com/40145410/50729088-7038ee80-113c-11e9-989b-b06260c70e01.gif)
-
-
 
 
 
