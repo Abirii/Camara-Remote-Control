@@ -12,7 +12,7 @@ The main idea is:
 Take a video as input and breaking the video into frames and simultaneously store that frames in a list.
 
 # Iteration over the frames
-After getting list of frames we perform iteration over the frames and control the index of the list with the 
+After getting list of frames we perform iteration over the frames, and control the index of the list with the 
 number of fingers that being held up.
 
 # Finger-counting
