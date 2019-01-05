@@ -1,5 +1,6 @@
 
 # Video hand control
+Control the speed of a video with the number of fingers that being held up.
 
 # Demo
 
