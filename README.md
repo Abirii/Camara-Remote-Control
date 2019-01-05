@@ -4,7 +4,7 @@
 # Demo
 
 
-# Main idea
+# The main idea
 
 ● Store the video frames
 
