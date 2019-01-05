@@ -1,9 +1,9 @@
 
 # Control video with hand
 
-1)Store the video frames and iteration over the frames
+● Store the video frames and iteration over the frames
 
-2)Count how many fingers are being held up
+● Count how many fingers are being held up
 
 
 # Store the video frames and iteration over the frames
