@@ -3,7 +3,7 @@
 Control the speed of a video with the number of fingers that being held up.
 
 # Demo
-
+soon
 
 # The main idea
 
