@@ -8,6 +8,7 @@
 
 # Store the frames
 Take a video as input and breaking the video into frames and simultaneously store that frames in a list.
+
 After getting list of frames we perform iteration over the frames.
 
 
