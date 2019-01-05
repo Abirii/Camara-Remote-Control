@@ -1,7 +1,9 @@
 
 # Control video with hand
-1)Breaking the video into frames
-2)Count how many fingers are being held up
+
+● Breaking the video into frames
+
+● Count how many fingers are being held up
 
 
 # breaking the video into frames
