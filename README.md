@@ -1,7 +1,7 @@
 
 # Video hand control
 
-## Demo
+# Demo
 
 
 # Main idea
