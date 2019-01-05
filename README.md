@@ -18,7 +18,6 @@ number of fingers that being held up.
 # Finger-counting
 Count how many fingers are being held up
 
-# Demo
 ![video1545480416](https://user-images.githubusercontent.com/40145410/50406760-26164b80-07d3-11e9-8bee-ccc3980f445a.gif) 
 
 
