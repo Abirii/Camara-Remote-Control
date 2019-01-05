@@ -1,5 +1,5 @@
 
-# Control video with hand
+# Video hand control
 The main idea is:
 
 ● Store the video frames
