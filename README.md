@@ -20,8 +20,7 @@ Take a video as input and breaking the video into frames and simultaneously stor
 After getting list of frames we perform iteration over the frames, and control the index of the list with the 
 number of fingers that being held up.
 
-# Finger-counting
-Count how many fingers are being held up
+# Count how many fingers are being held up
 
 ![video1545480416](https://user-images.githubusercontent.com/40145410/50406760-26164b80-07d3-11e9-8bee-ccc3980f445a.gif) 
 
