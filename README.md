@@ -2,7 +2,9 @@
 # Control video with hand
 The main idea is:
 
-● Store the video frames and iteration over the frames
+● Store the video frames
+
+● Iteration over the frames
 
 ● Count how many fingers are being held up
 
