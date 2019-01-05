@@ -1,3 +1,14 @@
+
+# Control video with hand
+1)Breaking the video into frames
+2)Count how many fingers are being held up
+
+
+# breaking the video into frames
+Take a video as input and breaking the video into frames and simultaneously store that frames in a list.
+After getting list of frames we perform iteration over the frames.
+
+
 # Finger-counting
 Count how many fingers are being held up
 
