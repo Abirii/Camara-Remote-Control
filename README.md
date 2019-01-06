@@ -25,7 +25,7 @@ Control the speed of a video with the number of fingers that being held up.
 ● Count how many fingers are being held up
 
 # Store the video frames
-Take a video as input and breaking the video into frames and simultaneously store that frames in a list.
+Take a video as input and break the video into frames and simultaneously store those frames in a list.
 
 # Iteration over the frames
 After getting list of frames we perform iteration over the frames, and control the index of the list with the 
