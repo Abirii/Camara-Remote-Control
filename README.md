@@ -1,6 +1,9 @@
 
 # Video hand control
 Control the speed of a video with the number of fingers that being held up.
+1 for backward.
+2 for forward.
+0 for stop.
 
 # Demo
 ![ezgif com-video-to-gif 3](https://user-images.githubusercontent.com/40145410/50738690-b98e4a00-11df-11e9-9a56-634878df20a6.gif)
