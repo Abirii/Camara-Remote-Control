@@ -16,6 +16,11 @@ Control the speed of a video with the number of fingers that being held up.
 
 
 
+![ezgif com-video-to-gif 4](https://user-images.githubusercontent.com/40145410/50739674-39baac80-11ec-11e9-9215-46bb1a86fd92.gif)
+
+
+
+
 # The main idea
 
 ● Store the video frames
