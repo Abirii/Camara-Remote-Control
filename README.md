@@ -8,7 +8,7 @@ Control the speed of a video with the number of fingers that being held up.
 
 0 for stop.
 
-4,5 normal speed.
+4,5 for normal speed.
 
 # Demo
 
