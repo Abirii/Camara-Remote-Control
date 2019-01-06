@@ -3,7 +3,8 @@
 Control the speed of a video with the number of fingers that being held up.
 
 # Demo
-![ezgif com-video-to-gif 1](https://user-images.githubusercontent.com/40145410/50737889-7a0f3000-11d6-11e9-8d60-8e92cc5fde6e.gif)![frame](https://user-images.githubusercontent.com/40145410/50737900-8d220000-11d6-11e9-8a06-7f274055a21a.gif)
+![ezgif com-video-to-gif 1](https://user-images.githubusercontent.com/40145410/50737889-7a0f3000-11d6-11e9-8d60-8e92cc5fde6e.gif)![ezgif com-video-to-gif 1](https://user-images.githubusercontent.com/40145410/50737947-1fc29f00-11d7-11e9-9ac5-e99c7d2c8e5b.gif)
+
 
 # The main idea
 
