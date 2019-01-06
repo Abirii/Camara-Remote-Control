@@ -9,7 +9,8 @@ Control the speed of a video with the number of fingers that being held up.
 0 for stop.
 
 # Demo
-![ezgif com-video-to-gif 3](https://user-images.githubusercontent.com/40145410/50738690-b98e4a00-11df-11e9-9a56-634878df20a6.gif)
+
+![ezgif com-video-to-gif 2](https://user-images.githubusercontent.com/40145410/50739614-c4e77280-11eb-11e9-8117-a8516608e12d.gif)
 
 
 
