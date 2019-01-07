@@ -1,6 +1,6 @@
 
-# Video hand control
-Control the speed of a video with the number of fingers that being held up.
+# Controlling video by hand gestures
+Controlling the speed of a video base on the number of fingers that's being held up.
 
 1 for backward.
 
