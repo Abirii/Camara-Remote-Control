@@ -49,7 +49,7 @@ For each frame in time - The estimated background is substracted from the curren
 We follow the steps bellow: 
 
 
-● Find the extrema Locations in the hand segment
+● Find the extrema locations in the hand segment
 
 ![1](https://user-images.githubusercontent.com/40145410/50377346-54a1f400-0624-11e9-9669-133a7a101086.PNG)
 
