@@ -63,7 +63,7 @@ We follow the steps bellow:
 ![capture](https://user-images.githubusercontent.com/40145410/50377359-93d04500-0624-11e9-9354-8dec40f4dcac.PNG)
 
 
-● Using that distance to create circle (Any points that are outside of the circle,those should be extended fingers) 
+● Use that distance to create a circle (any points that are outside of the circle are the extended fingers) 
 
 ![capture](https://user-images.githubusercontent.com/40145410/50377366-b06c7d00-0624-11e9-9ae9-a7a359aaffbe.PNG)
 
