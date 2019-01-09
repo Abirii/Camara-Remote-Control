@@ -28,8 +28,7 @@ Video speed monitoring by fingers held up and down.
 Take a video as input and break the video into frames and simultaneously store those frames in a list.
 
 # Iteration over the frames
-After getting list of frames we perform iteration over the frames, and control the index of the list with the 
-number of fingers that being held up.
+After getting a list of frames we perform iteration over the frames, and control the index of the list with the number of fingers that are being held up.
 
 # Count how many fingers are being held up
 
@@ -44,7 +43,7 @@ Background Extraction from a video. Background extraction comes important in obj
 
 
 # Hand Segmentation
-For each frame in time - The estimated background is substracted from the current image. The object left after subtraction are presumably the foreground objects. We had to blur the frames using ​Gaussian blur ​and morphology operations (​opening​) to ​achieve better results. Finally we can find the external contours from the Hand Segment.
+For each frame in time - The estimated background is substracted from the current image. The objects left after subtraction are presumably the foreground objects. We had to blur the frames using ​Gaussian blur ​and morphology operations (​opening​) to ​achieve better results. Finally we can find the external contours from the Hand Segment.
 
 # Count the fingers being held up 
 We follow the steps bellow: 
