@@ -40,7 +40,7 @@ number of fingers that being held up.
 
 
 # Motion Region of Interest
-Background Extraction from a Video. Background extraction comes important in object tracking. If you already have an image with constant background, then it is simple. But in the wild, background we be noisy, so one has to estimate the background across time. That is were we use Running Average implemented by ​cv2.accumulateWeighted(). We keep feeding each frame to this function, and the function keep finding the averages of all frames. We found that it achieves good results for 60 frames. 0.02 = α This results in an estimated background model learnt over time.
+Background Extraction from a Video Background extraction comes important in object tracking. If you already have an image with constant background, then it is simple. But in the wild, background we be noisy, so one has to estimate the background across time. That is were we use Running Average implemented by ​cv2.accumulateWeighted(). We keep feeding each frame to this function, and the function keep finding the averages of all frames. We found that it achieves good results for 60 frames. 0.02 = α This results in an estimated background model learnt over time.
 
 
 # Hand Segmentation
