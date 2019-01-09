@@ -69,7 +69,7 @@ We follow the steps bellow:
 
 
 
-● Return the number of the fingers and procedures frames. 
+● Return the number of the fingers. 
 
 
 
