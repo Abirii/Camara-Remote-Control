@@ -53,7 +53,7 @@ We follow the steps bellow:
 
 ![1](https://user-images.githubusercontent.com/40145410/50377346-54a1f400-0624-11e9-9669-133a7a101086.PNG)
 
-●  Use Extrema to calculate the hand center
+●  Use the extrema locations to calculate the hand center
 
 ![capture](https://user-images.githubusercontent.com/40145410/50377348-7307ef80-0624-11e9-8847-f5b047dfec78.PNG)
 
