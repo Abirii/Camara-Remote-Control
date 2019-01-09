@@ -58,7 +58,7 @@ We follow the steps bellow:
 ![capture](https://user-images.githubusercontent.com/40145410/50377348-7307ef80-0624-11e9-8847-f5b047dfec78.PNG)
 
 
-● Calculate the distance for the point further away from the center 
+● Calculate the distance between the center and the point that is the farthest from the center
 
 ![capture](https://user-images.githubusercontent.com/40145410/50377359-93d04500-0624-11e9-9354-8dec40f4dcac.PNG)
 
