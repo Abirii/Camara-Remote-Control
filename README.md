@@ -1,14 +1,14 @@
 
-# Controlling video by hand gestures
-Video speed monitoring by fingers held up and down.
+# Controlling video speed with hand gestures 
+Controlling the speed of a video with the number of fingers that are held up.
 
 1 for backward.
 
-2 for forward.
+2 fingers for forward.
 
-0 for stop.
+0 fingers for stop.
 
-4,5 for normal speed.
+4/5 fingers for normal speed.
 
 # Demo
 
