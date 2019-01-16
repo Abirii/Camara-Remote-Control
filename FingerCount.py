@@ -135,19 +135,79 @@ def visual_data(hand,radius,circumference,center_x,center_y,x,y,w,h):
     cv2.rectangle(procedures,(x,y),(x+w,y+h),(0,0,255),2)
     
     return procedures     
-##########################################################################################################
+
+
+"""
+Break a given video to frames and store them in a list.
+Return that list
+"""
+def break_video_to_frames():
+    cap = cv2.VideoCapture('TestVideo.mp4')
+    check , vid = cap.read()
+    # Grab the current frame. 
+    check , vid = cap.read()
+    width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+    height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+    
+    
+    counter = 0
+    #Initialize the value  of check variable
+    check = True
+    #List of frames
+    frame_list = []
+  
+    while(check == True):
+        cv2.imwrite("frame%d.jpg" %counter , vid) 
+        #Check value is false and the last frame is None in the end of the video 
+        check,vid = cap.read() 
+        #Add each frame in the list
+        frame_list.append(vid)
+        counter += 1
+    #Remove the last frame (None)
+    frame_list.pop() 
+    return frame_list,width,height
+    
+"""
+Change the number of frame in frame list
+Return the number of frame
+"""
+def control(finger,frame_number_on_video):
+    # 0 -> stop video
+    if fingers == 0:
+        frame_number_on_video -= 1
+    #Backword
+    elif fingers == 1:
+        frame_number_on_video -= 3
+    elif fingers == 2:
+        frame_number_on_video += 3
+  
+    
+    return frame_number_on_video
+      
+        
+######################################################################################################################################
 
 cam = cv2.VideoCapture(0)
+#List of frames from the video
+frame_list,width_video,height_video = break_video_to_frames()
 #Variables for save the output as a video on windows
 width = int(cam.get(cv2.CAP_PROP_FRAME_WIDTH))
 height = int(cam.get(cv2.CAP_PROP_FRAME_HEIGHT))
-writer_frame = cv2.VideoWriter('FingerCount.mp4',cv2.VideoWriter_fourcc(*'DIVX'),20,(width,height))
-writer_visual_threshold = cv2.VideoWriter('VisualThreshold.mp4',cv2.VideoWriter_fourcc(*'DIVX'),20,(width,height))
-writer_visual_color = cv2.VideoWriter('VisualColor.mp4',cv2.VideoWriter_fourcc(*'DIVX'),20,(width,height))
-number_of_frame = 0
 
-while True:
+writer_frame = cv2.VideoWriter('FingerCount.mp4',cv2.VideoWriter_fourcc(*'DIVX'),20,(width,height))
+writer_video = cv2.VideoWriter('ControlledVideo.mp4',cv2.VideoWriter_fourcc(*'DIVX'),20,(width_video,height_video))
+
+#Defult variables
+number_of_frame = 0
+frame_number_on_video = 0
+fingers = -1;
+while True:   
     
+    frame_number_on_video += 1
+    #Start the video over and over
+    if (frame_number_on_video >= len(frame_list) or frame_number_on_video <= 0):
+        frame_number_on_video = 0
+        
     ret,frame = cam.read()
     # flip the frame so that it is not the mirror view
     frame = cv2.flip(frame, 1)
@@ -159,6 +219,8 @@ while True:
     #Blur and removing noise from ROI
     gray_roi = cv2.GaussianBlur(gray_roi,(7,7),3)
     gray_roi = cv2.morphologyEx(gray_roi, cv2.MORPH_OPEN,(4,4))
+   
+    
     #Calculate that background for 60 frames
     if number_of_frame < 60:
         calc_accum_avg(gray_roi,accumulated_weight)
@@ -166,10 +228,28 @@ while True:
             cv2.putText(frame_copy,'WAIT,GETTING BACKGROUND',(200,400),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),2)
             cv2.imshow('Finger Count',frame_copy)
     else:#After 60 frames
+        
         #Segments the hand region
         hand = segment(gray_roi)
+        #The cÎ¿ntroled video
+        cv2.putText(frame_list[frame_number_on_video],"<< backwards",(70,45),cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,255),2)
+        cv2.putText(frame_list[frame_number_on_video],"Stop",(70,90),cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,255),2)
+        cv2.putText(frame_list[frame_number_on_video],"forward >>",(70,135),cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,255),2)
+        cv2.putText(frame_list[frame_number_on_video],"normal",(70,190),cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,255),2)
         
-        if hand is not None:
+        if fingers == 0:
+            cv2.putText(frame_list[frame_number_on_video],"Stop",(70,90),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),2)
+        elif fingers == 1:
+            cv2.putText(frame_list[frame_number_on_video],"<< backwards",(70,45),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),2)
+        elif fingers == 2:
+            cv2.putText(frame_list[frame_number_on_video],"forward >>",(70,135),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),2)
+        else:
+            cv2.putText(frame_list[frame_number_on_video],"normal",(70,190),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),2)
+        
+        writer_video.write(frame_list[frame_number_on_video])
+        cv2.imshow("CÎ¿ntrol",frame_list[frame_number_on_video])
+        
+        if hand is not None:    
             #threshold and hand segment
             thresholded, hand_segment = hand
             #Number of fingers and frames that show the procedures
@@ -182,27 +262,27 @@ while True:
             cv2.rectangle(visual_color,(roi_left,roi_top),(roi_right,roi_bottom),(0,0,255),5)
             cv2.imshow("Visual threshold",visual_threshold)
             cv2.imshow("Visual color",visual_color)
-            
+            frame_number_on_video = control(fingers,frame_number_on_video)
+        
     cv2.rectangle(frame_copy,(roi_left,roi_top),(roi_right,roi_bottom),(0,0,255),5)
     
     number_of_frame += 1
     
     cv2.imshow("Finger Count", frame_copy)
     
+   
     #Save the output
     writer_frame.write(frame_copy)
-    #writer_visual_color.write(visual_color)
-    #writer_visual_threshold.write(visual_threshold)
-
+    
+  
     #Close windows with Esc
     k = cv2.waitKey(1) & 0xFF
     if k == 27:
         break
-        
+
 
 cv2.destroyAllWindows()
 writer_frame.release()
-writer_visual_color.release()
-writer_visual_threshold.release()
+writer_video.release()
 cam.release()
  
