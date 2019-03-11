@@ -68,66 +68,76 @@ The idea is this:
 Return the number of the fingers and procedures frames.
 """
 def count_fingers(frame,thresholded,hand_segment):
-    
-    #Find the top, bottom, left , and right in the hand_segment with the extream points
-    top = tuple(hand_segment[hand_segment[:, :, 1].argmin()][0])
-    bottom = tuple(hand_segment[hand_segment[:, :, 1].argmax()][0])
-    left = tuple(hand_segment[hand_segment[:, :, 0].argmin()][0])
-    right = tuple(hand_segment[hand_segment[:, :, 0].argmax()][0])
-    
-    #Center of the hand is going to be halfway between the top and bottom and halfway between the left and right
-    center_x = (left[0] + right[0]) // 2
-    center_y = (top[1] + bottom[1]) // 2
-    
-    #Calculate the distance from the center to all the extreme points
-    distance = pairwise.euclidean_distances([(center_x, center_y)], Y=[left, right, top, bottom])[0]
-    max_distance = distance.max()
-    
-    #Create a circle with a 70% percent radius of the max in distance.(i found work wall on my hand)
-    radius = int(0.7*max_distance)
-    circumference = (2*np.pi*radius)
-    
-    #Set circular ROI
-    circular_roi = np.zeros(thresholded.shape[:2], dtype="uint8")
-    #Draw the circular ROI
-    cv2.circle(circular_roi,(center_x,center_y),radius,255,10)
-     #This then returns the cut out obtained using the mask on the thresholded hand image.
-    circular_roi = cv2.bitwise_and(thresholded,thresholded,mask=circular_roi)
-    
-    #Grab all the contours in this circular region of interest.
-    image,contours,hierarchy = cv2.findContours(circular_roi.copy(),cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_NONE)
-    
-    counter = 0
-    
-    for cnt in contours:
-        #Grab the bounding box of the contour.
-        (x,y,w,h) = cv2.boundingRect(cnt)
-        #Check if the contour region is in the right range
-        out_of_wrist = ((center_y + (center_y*0.27)) > (y+h))
         
-        #Check if the contour is outside the circumference
-        limit_points = ((circumference*0.26) > cnt.shape[0])
-        limit_points1 = ((circumference*0.04) < cnt.shape[0])
-    
-        if  out_of_wrist and limit_points and limit_points1:
-            counter += 1
-        if counter > 5:
-            counter = 5
+        #Find the top, bottom, left , and right in the hand_segment with the extream points
+        top = tuple(hand_segment[hand_segment[:, :, 1].argmin()][0])
+        bottom = tuple(hand_segment[hand_segment[:, :, 1].argmax()][0])
+        left = tuple(hand_segment[hand_segment[:, :, 0].argmin()][0])
+        right = tuple(hand_segment[hand_segment[:, :, 0].argmax()][0])
+        
+        
+        #Center of the hand is going to be halfway between the top and bottom and halfway between the left and right
+        center_x = (left[0] + right[0]) // 2
+        center_y  = (top[1] + bottom[1]) // 2 + 20
+        
+        #Calculate the distance from the center to all the extreme points
+        distance = pairwise.euclidean_distances([(center_x, center_y)], Y=[left, right, top, bottom])[0]
+        max_distance = distance.max()
+        
+        #Create a circle with a 70% percent radius of the max in distance.(i found work wall on my hand)
+        radius = int(0.65*max_distance)
+        
+        #Set circular ROI
+        circular_roi = np.zeros(thresholded.shape[:2], dtype="uint8")
+        #Draw the circular ROI
+        cv2.circle(circular_roi,(center_x,center_y),radius,255,10)
+        #This then returns the cut out obtained using the mask on the thresholded hand image.
+        circular_roi = cv2.bitwise_and(thresholded,thresholded,mask=circular_roi)
+        
+        #Grab all the contours in this circular region of interest.
+        image,contours,hierarchy = cv2.findContours(circular_roi.copy(),cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_NONE)
+        
+        
+        counter = 0
+        
+        for cnt in contours:
+            
+            #Grab the bounding box of the contour.
+            (x,y,w,h) = cv2.boundingRect(cnt)
+            
+            limit_points1 = cnt.shape[0] < 90
+            limit_points2 = cnt.shape[0] > 20
+            
+            #Check if the contour region is in the right range
+            out_of_wrist = (center_y + center_y*0.20)  > y+h
+            
+            
+            if  out_of_wrist and limit_points1 and limit_points2:
+                counter += 1
+            if counter > 5:
+                counter = 5
+                
+             
+        #Visual the data(for debug use)
+        visual_threshold = visual_data(thresholded,radius,center_x,center_y,x,y,w,h)
+        frame = cv2.flip(frame, 1)
+        visual_color = visual_data(frame,radius,center_x,center_y,x,y,w,h)
+        return (counter,visual_threshold,visual_color)
          
     #Visual the data(for debug use)
-    visual_threshold = visual_data(thresholded,radius,circumference,center_x,center_y,x,y,w,h)
+    visual_threshold = visual_data(thresholded,radius,center_x,center_y,x,y,w,h)
     frame = cv2.flip(frame, 1)
-    visual_color = visual_data(frame,radius,circumference,center_x,center_y,x,y,w,h)
+    visual_color = visual_data(frame,radius,center_x,center_y,x,y,w,h)
     return (counter,visual_threshold,visual_color)
        
 
 """
 Visual all the calculates in the image.
 hand - binary image of the hand
-radius,circumference,center_x,center_y - use for draw the circle(also for debuging use) 
+radius,center_x,center_y - use for draw the circle(also for debuging use) 
 x,y,w,h - Draw rectangle around the contours 
 """
-def visual_data(hand,radius,circumference,center_x,center_y,x,y,w,h):
+def visual_data(hand,radius,center_x,center_y,x,y,w,h):
     #Draw the circle and the center of the circle
     procedures = cv2.circle(hand, (center_x,center_y), radius,(0,255,0), thickness=4)
     cv2.circle(procedures, (center_x,center_y),5, (0,255,255), -1)
