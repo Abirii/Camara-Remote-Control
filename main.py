@@ -1,7 +1,7 @@
 import cv2
 import segment
 import draw
-import CountFinger as cf
+import fingerCount as cf
 import videoManipulation as vm
 
 #The corners of the rectangle 
