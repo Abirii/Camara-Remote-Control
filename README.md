@@ -12,9 +12,9 @@ Controlling the speed of a video with the number of fingers that are held up
 
  4/5 fingers for normal speed.
 
- **hand wave left for previous channel**   <-----------------------------------------------------
+ **hand wave to the left for previous channel**   <-----------------------------------------------------
 
- **hand wave right for next channel**   <-----------------------------------------------------
+ **hand wave to the right for next channel**   <-----------------------------------------------------
 
 
 
@@ -89,21 +89,25 @@ We follow the steps bellow:
 # **Identify touching in edges the frame**    <-----------------------------------------------------
 
 
-● Create mask with two lines along the edges 
+● Create mask with two lines along the edges   <-----------------------------------------------------
+
 ![mask_lines](https://user-images.githubusercontent.com/40145410/57572650-12881c00-7426-11e9-9b22-442c3e8fe333.PNG)●
 
-● then use and bitwise operators  
+● then use and bitwise operators    <-----------------------------------------------------
+
 
 ![hand](https://user-images.githubusercontent.com/40145410/57572655-1ae05700-7426-11e9-9c0a-c54738a56c0b.PNG) 
 
-● the result of the previous step will give us a few contours
+● the result of the previous step will give us a few contours  <-----------------------------------------------------
+
 
 ![final](https://user-images.githubusercontent.com/40145410/57572660-1fa50b00-7426-11e9-88f8-8bc8b2f110e4.PNG)
 
+    <-----------------------------------------------------
 
 ● Determine the size of the contour that allow allowed (the size should small, in my case size > 20 and size < 60 worked)
 
-● Find the location of contours
+● Find the location of contours 
 
 ● switch channel if:
   
