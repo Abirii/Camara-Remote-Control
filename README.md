@@ -2,17 +2,17 @@
 # Controlling video speed with hand gestures 
 **Controlling the speed of a video with the number of fingers that are held up.**
 
-● 1 for backward.
+ 1 for backward.
 
-● 2 fingers for forward.
+ 2 fingers for forward.
 
-● 0 fingers for stop.
+ 0 fingers for stop.
 
-● 4/5 fingers for normal speed.
+ 4/5 fingers for normal speed.
 
-● **hand wave left for previous channel**
+ **hand wave left for previous channel**   <-----------------------------------------------------
 
-● **hand wave right for next channel**
+ **hand wave right for next channel**   <-----------------------------------------------------
 
 
 
@@ -34,7 +34,7 @@
 
 ● Count how many fingers are being held up
 
-● **Identify touching in edges the frame**
+● **Identify touching in edges the frame**   <-----------------------------------------------------
 
 # Store the video frames
 Take a video as input and break the video into frames and simultaneously store those frames in a list.
@@ -84,10 +84,37 @@ We follow the steps bellow:
 ● Return the number of the fingers. 
 
 
-# **Identify touching in edges the frame**
+# **Identify touching in edges the frame**    <-----------------------------------------------------
 
 
+● Create mask with two lines along the edges 
+![mask_lines](https://user-images.githubusercontent.com/40145410/57572650-12881c00-7426-11e9-9b22-442c3e8fe333.PNG)●
 
+● then use and bitwise operators  
+
+![mask_lines](https://user-images.githubusercontent.com/40145410/57572650-12881c00-7426-11e9-9b22-442c3e8fe333.PNG)**and**
+![hand](https://user-images.githubusercontent.com/40145410/57572655-1ae05700-7426-11e9-9c0a-c54738a56c0b.PNG) 
+
+● the result of the previous step will give us a few contours
+
+![final](https://user-images.githubusercontent.com/40145410/57572660-1fa50b00-7426-11e9-88f8-8bc8b2f110e4.PNG)
+
+
+● Determine the size of the contour that allow allowed (the size should small, in my case size > 20 and size < 60 worked)
+
+● Find the location of contours
+
+● switch channel if:
+  
+  The size of contours are in the right range.
+  
+  The location of contours in the limits of the frame.
+  
+  There is 0, 1, or 2 fingers that being held up 
+  
+
+  
+  
 
 
 
