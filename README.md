@@ -105,7 +105,7 @@ We follow the steps bellow:
 
     <-----------------------------------------------------
 
-● Determine the size of the contour that allow allowed (the size should small, in my case size > 20 and size < 60 worked)
+● Determine the size of the contour that allowed (the size should small)
 
 ● Find the location of contours 
 
