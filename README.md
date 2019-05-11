@@ -34,6 +34,8 @@
 
 ● Count how many fingers are being held up
 
+**Identify touching in edges the frame**
+
 # Store the video frames
 Take a video as input and break the video into frames and simultaneously store those frames in a list.
 
