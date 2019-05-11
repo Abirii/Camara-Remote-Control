@@ -2,17 +2,17 @@
 # Controlling video speed with hand gestures 
 **Controlling the speed of a video with the number of fingers that are held up.**
 
-1 for backward.
+● 1 for backward.
 
-2 fingers for forward.
+● 2 fingers for forward.
 
-0 fingers for stop.
+● 0 fingers for stop.
 
-4/5 fingers for normal speed.
+● 4/5 fingers for normal speed.
 
-**hand wave left for previous channel**
+● **hand wave left for previous channel**
 
-**hand wave right for next channel**
+● **hand wave right for next channel**
 
 
 
@@ -34,7 +34,7 @@
 
 ● Count how many fingers are being held up
 
-**Identify touching in edges the frame**
+● **Identify touching in edges the frame**
 
 # Store the video frames
 Take a video as input and break the video into frames and simultaneously store those frames in a list.
@@ -83,6 +83,8 @@ We follow the steps bellow:
 
 ● Return the number of the fingers. 
 
+
+# **Identify touching in edges the frame**
 
 
 
