@@ -110,7 +110,7 @@ We follow the steps bellow:
 
 ● Find the location of contours 
 
-● switch channel if:
+● Switch channel if:
   
    1) The size of contours are in the right range.
   
