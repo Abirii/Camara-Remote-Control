@@ -1,6 +1,6 @@
 
-# Controlling video speed with hand gestures 
-Controlling the speed of a video with the number of fingers that are held up.
+# **Controlling video speed with hand gestures 
+Controlling the speed of a video with the number of fingers that are held up.**
 
 1 for backward.
 
@@ -10,7 +10,11 @@ Controlling the speed of a video with the number of fingers that are held up.
 
 4/5 fingers for normal speed.
 
-** hand wave back and forth to move a channel **
+**hand wave left for previous channel**
+
+**hand wave right for next channel**
+
+
 
 
 # Demo
