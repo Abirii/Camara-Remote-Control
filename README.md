@@ -1,7 +1,8 @@
 
 # Camara remote control  
 Controlling the speed of a video with the number of fingers that are held up
-****And switch channels with hand wave****
+
+**And switch channels with hand wave**
 
  1 for backward.
 
