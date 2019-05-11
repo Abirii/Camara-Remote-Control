@@ -101,7 +101,8 @@ We follow the steps bellow:
 ● the result of the previous step will give us a few contours  <-----------------------------------------------------
 
 
-![final](https://user-images.githubusercontent.com/40145410/57572660-1fa50b00-7426-11e9-88f8-8bc8b2f110e4.PNG)
+![final](https://user-images.githubusercontent.com/40145410/57573163-449c7c80-742c-11e9-8998-db6c711f8f8b.PNG)
+
 
     <-----------------------------------------------------
 
@@ -115,21 +116,16 @@ We follow the steps bellow:
   
   The location of contours on **one** edge of the frame.
   
-  There is 0 or one fingers that being held up 
+  There is only one finger that being held up.(thumb)
   
+In this exemple:
+there is two sets of contours on both side of the frame.
+But the size of the contours on the left is too big, the size of the right contours is in the right range,
+so there is only allowed contours set.
+the number of fingers that held up is 5, so the channle will *not* change. 
+(If 4 fingers will be in to the circle, then switch to next channel)
+
 
   
   
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
