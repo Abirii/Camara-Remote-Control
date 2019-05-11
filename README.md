@@ -10,6 +10,9 @@ Controlling the speed of a video with the number of fingers that are held up.
 
 4/5 fingers for normal speed.
 
+** hand wave back and forth to move a channel **
+
+
 # Demo
 
 ![ezgif com-video-to-gif 4](https://user-images.githubusercontent.com/40145410/50739674-39baac80-11ec-11e9-9215-46bb1a86fd92.gif)
