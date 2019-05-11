@@ -112,11 +112,11 @@ We follow the steps bellow:
 
 ● switch channel if:
   
-  The size of contours are in the right range.
+     The size of contours are in the right range.
   
-  The location of contours on **one** edge of the frame.
+     The location of contours on **one** edge of the frame.
   
-  There is only one finger that being held up.(thumb)
+     There is only one finger that being held up.(thumb)
   
 In this exemple:
 there is two sets of contours on both side of the frame.
