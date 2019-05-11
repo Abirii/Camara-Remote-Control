@@ -1,6 +1,7 @@
 
-# Controlling video speed with hand gestures 
-**Controlling the speed of a video with the number of fingers that are held up.**
+# Camara remote control  
+Controlling the speed of a video with the number of fingers that are held up,
+**and switch channels with hand wave**
 
  1 for backward.
 
@@ -91,8 +92,6 @@ We follow the steps bellow:
 ![mask_lines](https://user-images.githubusercontent.com/40145410/57572650-12881c00-7426-11e9-9b22-442c3e8fe333.PNG)●
 
 ● then use and bitwise operators  
-
-![mask_lines](https://user-images.githubusercontent.com/40145410/57572650-12881c00-7426-11e9-9b22-442c3e8fe333.PNG)
 
 ![hand](https://user-images.githubusercontent.com/40145410/57572655-1ae05700-7426-11e9-9c0a-c54738a56c0b.PNG) 
 
