@@ -92,7 +92,8 @@ We follow the steps bellow:
 
 ● then use and bitwise operators  
 
-![mask_lines](https://user-images.githubusercontent.com/40145410/57572650-12881c00-7426-11e9-9b22-442c3e8fe333.PNG)**and**
+![mask_lines](https://user-images.githubusercontent.com/40145410/57572650-12881c00-7426-11e9-9b22-442c3e8fe333.PNG)
+
 ![hand](https://user-images.githubusercontent.com/40145410/57572655-1ae05700-7426-11e9-9c0a-c54738a56c0b.PNG) 
 
 ● the result of the previous step will give us a few contours
