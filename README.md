@@ -114,7 +114,7 @@ We follow the steps bellow:
   
    1) The size of contours are in the right range.
   
-   2) The location of contours on **one** edge of the frame.
+   2) The location of contours on **one** side of the frame.
   
    3) There is only one finger that being held up.(thumb)
   
