@@ -91,7 +91,7 @@ We follow the steps bellow:
 
 ● Create mask with two lines along the edges   <-----------------------------------------------------
 
-![mask_lines](https://user-images.githubusercontent.com/40145410/57572650-12881c00-7426-11e9-9b22-442c3e8fe333.PNG)●
+![mask_lines](https://user-images.githubusercontent.com/40145410/57573093-e53e6c80-742b-11e9-940f-859fc0c61e24.PNG)
 
 ● then use and bitwise operators    <-----------------------------------------------------
 
@@ -113,9 +113,9 @@ We follow the steps bellow:
   
   The size of contours are in the right range.
   
-  The location of contours in the limits of the frame.
+  The location of contours on **one** edge of the frame.
   
-  There is 0, 1, or 2 fingers that being held up 
+  There is 0 or one fingers that being held up 
   
 
   
