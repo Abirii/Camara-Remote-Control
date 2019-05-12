@@ -1,8 +1,8 @@
 
 # Camara remote control  
-Controlling the speed of a video with the number of fingers that are held up
+Controlling the speed of a video with the number of fingers that are held up.
 
-And switch channels with hand-waving
+And switch channels with hand-waving.
 
  1 finger for backward.
 
@@ -12,9 +12,9 @@ And switch channels with hand-waving
 
  4/5 fingers for normal speed.
 
- Hand wave to the left for previous channel  
+ Hand wave to the left for previous channel.
  
- Hand wave to the right for next channel  
+ Hand wave to the right for next channel.
 
 
 
