@@ -1,5 +1,5 @@
 
-# Camara remote control  
+# Camara Remote Control  
 Controlling the speed of a video with the number of fingers that are held up.
 
 And switch channels with hand-waving.
