@@ -2,9 +2,9 @@
 # Camara remote control  
 Controlling the speed of a video with the number of fingers that are held up
 
-**And switch channels with hand waveing**  <-----------------------------------------------------
+And switch channels with hand-waving
 
- 1 for backward.
+ 1 finger for backward.
 
  2 fingers for forward.
 
@@ -12,9 +12,9 @@ Controlling the speed of a video with the number of fingers that are held up
 
  4/5 fingers for normal speed.
 
- **hand wave to the left for previous channel**   <-----------------------------------------------------
-
- **hand wave to the right for next channel**   <-----------------------------------------------------
+ Hand wave to the left for previous channel  
+ 
+ Hand wave to the right for next channel  
 
 
 
@@ -36,10 +36,10 @@ Controlling the speed of a video with the number of fingers that are held up
 
 ● Count how many fingers are being held up
 
-● **Identify touching in edges the frame**   <-----------------------------------------------------
+● Identify when the fingers reach the edge of the frame  
 
 # Store the video frames
-Take a video as input and break the video into frames and simultaneously store those frames in a list.
+Take a video as the input and break it into frames. Simultaneously store those frames in a list.
 
 # Iteration over the frames
 After getting a list of frames we perform iteration over the frames, and control the index of the list with the number of fingers that are being held up.
@@ -57,7 +57,7 @@ Background Extraction from a video. Background extraction comes important in obj
 
 
 # Hand Segmentation
-For each frame in time - The estimated background is substracted from the current image. The objects left after subtraction are presumably the foreground objects. We had to blur the frames using ​Gaussian blur ​and morphology operations (​opening​) to ​achieve better results. Finally we can find the external contours from the Hand Segment.
+For each frame in time - The estimated background is substracted from the current image. The objects left after subtraction are presumably the foreground objects. We had to blur the frames using ​Gaussian blur ​and morphology operations (​opening​) to ​achieve better results. Finally, we can find the external contours from the Hand Segment.
 
 # Count the fingers being held up 
 We follow the steps bellow: 
@@ -86,46 +86,30 @@ We follow the steps bellow:
 ● Return the number of the fingers. 
 
 
-# **Identify touching in edges the frame**    <-----------------------------------------------------
+# Identify when the fingers reach the edge of the frame
 
 
-● Create mask with two lines along the edges   <-----------------------------------------------------
+● Create a mask with two lines along the edges.
 
 ![mask_lines](https://user-images.githubusercontent.com/40145410/57573093-e53e6c80-742b-11e9-940f-859fc0c61e24.PNG)
 
-● then use and bitwise operators    <-----------------------------------------------------
+● Then use the "and" bitwise operator
 
 
 ![hand](https://user-images.githubusercontent.com/40145410/57572655-1ae05700-7426-11e9-9c0a-c54738a56c0b.PNG) 
 
-● the result of the previous step will give us a few contours  <-----------------------------------------------------
-
+● The result of the previous step will give us a few contours.
 
 ![final](https://user-images.githubusercontent.com/40145410/57573163-449c7c80-742c-11e9-8998-db6c711f8f8b.PNG)
 
+● Determine the size that's allowed of the contour (the size should be small)
 
-    <-----------------------------------------------------
-
-● Determine the size of the contour that allowed (the size should small)
-
-● Find the location of contours 
+● Find the location of the contours.
 
 ● Switch channel if:
   
-   1) The size of contours are in the right range.
+   1) The size of the contours are in the right range.
   
-   2) The location of contours on **one** side of the frame.
+   2) The location of the contours are on one side of the frame.
   
-   3) There is only one finger that being held up.(thumb)
-  
-In this exemple:
-there is two sets of contours on both side of the frame.
-But the size of the contours on the left is too big, the size of the right contours is in the right range,
-so there is only allowed contours set.
-the number of fingers that held up is 5, so the channle will *not* change. 
-(If 4 fingers will be in to the circle, then switch to next channel)
-
-
-  
-  
-  
+   3) There is only one finger that being held up.
