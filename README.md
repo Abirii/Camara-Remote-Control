@@ -1,8 +1,8 @@
 
 # Camara Remote Control  
-Controlling the speed of a video with the number of fingers that are held up.
 
-And switch channels with hand-waving.
+A remote control that's operated via a camera. The remote control enables channel switching and controlling video speed through hand and fingers movements.
+Implemented in Python and OpenCV.
 
  1 finger for backward.
 
