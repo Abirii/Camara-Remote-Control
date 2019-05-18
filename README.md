@@ -10,8 +10,6 @@ Implemented in Python and OpenCV.
 
  5 fingers for forward.
 
- 4/5 fingers for normal speed.
-
  Hand wave to the left for previous channel.
  
  Hand wave to the right for next channel.
