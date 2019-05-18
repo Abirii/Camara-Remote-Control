@@ -4,11 +4,11 @@
 A remote control that's operated via a camera. The remote control enables channel switching and controlling video speed through hand and fingers movements.
 Implemented in Python and OpenCV.
 
+ 0 fingers for stop.
+
  3 finger for backward.
 
  5 fingers for forward.
-
- 0 fingers for stop.
 
  4/5 fingers for normal speed.
 
