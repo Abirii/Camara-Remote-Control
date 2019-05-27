@@ -19,9 +19,8 @@ Implemented in Python and OpenCV.
 
 # Demo
 
-![ezgif com-video-to-gif 4](https://user-images.githubusercontent.com/40145410/50739674-39baac80-11ec-11e9-9215-46bb1a86fd92.gif)
+![Demo](https://user-images.githubusercontent.com/40145410/58424277-c254bf00-809f-11e9-9db9-a81e0a0925e6.gif)
 
-![channels](https://user-images.githubusercontent.com/40145410/57572426-db643b80-7422-11e9-9d8e-01d6c982efc7.gif)
 
 
 
