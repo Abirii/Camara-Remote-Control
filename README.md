@@ -1,6 +1,6 @@
 
 # Camara Remote Control  
-
+##### Using Image Processing techniques
 A remote control that's operated via a camera. The remote control enables channel switching and controlling video speed through hand and fingers movements.
 Implemented in Python and OpenCV.
 
